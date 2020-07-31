@@ -9,13 +9,13 @@ GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 while True:
 
-    channel = GPIO.wait_for_edge(pin, GPIO.RISING, timeout=1000)
-    time.sleep(2)
+    channel = GPIO.wait_for_edge(pin, GPIO.RISING, timeout=250)
+    #time.sleep(2)
     if channel is not None:
         print("Switch is on")
-    time.sleep(1)
+    #time.sleep(1)
 
-    channel = GPIO.wait_for_edge(pin, GPIO.FALLING, timeout=1000)
-    time.sleep(1)
-    if channel is None:
+    channel = GPIO.wait_for_edge(pin, GPIO.FALLING, timeout=250)
+    #time.sleep(1)
+    if channel is not None:
         print("Switch is off")
