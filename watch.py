@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 import time
 
 #   Reed Switch Watcher. Continious Looping.
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 GPIO.setup(11, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 while True:
